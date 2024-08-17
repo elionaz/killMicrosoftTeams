@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# All the folders
+folders=(
+  "$HOME/Library/Caches/com.microsoft.teams"
+  "$HOME/Library/Caches/com.microsoft.teams.shipit"
+  "$HOME/Library/Application Support/Microsoft/Teams"
+  "$HOME/Library/Application Support/Microsoft/Teams/Application Cache/Cache"
+  "$HOME/Library/Application Support/Microsoft/Teams/blob_storage"
+  "$HOME/Library/Application Support/Microsoft/Teams/Cache"
+  "$HOME/Library/Application Support/Microsoft/Teams/databases"
+  "$HOME/Library/Application Support/Microsoft/Teams/GPUCache"
+  "$HOME/Library/Application Support/Microsoft/Teams/IndexedDB"
+  "$HOME/Library/Application Support/Microsoft/Teams/Local Storage"
+  "$HOME/Library/Application Support/Microsoft/Teams/tmp"
+)
+
+# Delete the folders
+for folder in "${folders[@]}"; do
+  if [ -d "$folder" ]; then
+    rm -rf "$folder"
+    echo "Deleted ☠️: $folder"
+  else
+    echo "Not found: $folder"
+  fi
+done
+
+echo "DONE ✅"
+
