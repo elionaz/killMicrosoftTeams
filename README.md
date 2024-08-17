@@ -1,0 +1,2 @@
+# killMicrosoftTeams
+Uninstall Microsoft teams
